@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+.ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-content {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 60s linear infinite;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.gallery-carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.gallery-carousel-content {
+  display: flex;
+  gap: 3rem;
+  animation: galleryScroll 40s linear infinite;
+  will-change: transform;
+}
+
+@keyframes galleryScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
